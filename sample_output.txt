@@ -1,0 +1,115 @@
+Вывод при запуске:
+
+root@176046:~# ./script.sh 
+[INFO]  Мониторинг запущен. Интервал: 60с. Лог: /root/monitor.log
+[INFO]  Для остановки нажмите Ctrl+C.
+^C[INFO]  Получен сигнал завершения. Выходим...
+
+
+
+================================================
+
+Запись в лог-файл:
+
+root@176046:~# cat /root/monitor.log 
+--- 2026-10-05 03:51:13 ---
+### free -h ###
+               total        used        free      shared  buff/cache   available
+Mem:           956Mi       151Mi       135Mi       3.6Mi       695Mi       804Mi
+Swap:             0B          0B          0B
+### df -h ###
+Filesystem      Size  Used Avail Use% Mounted on
+tmpfs           192M  616K  191M   1% /run
+/dev/vda2       4.9G  3.2G  1.5G  68% /
+tmpfs           479M     0  479M   0% /dev/shm
+tmpfs           479M     0  479M   0% /tmp
+none            1.0M     0  1.0M   0% /run/credentials/systemd-journald.service
+none            1.0M     0  1.0M   0% /run/credentials/getty@tty1.service
+tmpfs            96M  8.0K   96M   1% /run/user/0
+### uptime ###
+ 03:51:13 up  8:18,  1 user,  load average: 0.18, 0.12, 0.10
+
+--- 2026-10-05 03:52:13 ---
+### free -h ###
+               total        used        free      shared  buff/cache   available
+Mem:           956Mi       151Mi       135Mi       3.6Mi       695Mi       804Mi
+Swap:             0B          0B          0B
+### df -h ###
+Filesystem      Size  Used Avail Use% Mounted on
+tmpfs           192M  616K  191M   1% /run
+/dev/vda2       4.9G  3.2G  1.5G  68% /
+tmpfs           479M     0  479M   0% /dev/shm
+tmpfs           479M     0  479M   0% /tmp
+none            1.0M     0  1.0M   0% /run/credentials/systemd-journald.service
+none            1.0M     0  1.0M   0% /run/credentials/getty@tty1.service
+tmpfs            96M  8.0K   96M   1% /run/user/0
+### uptime ###
+ 03:52:13 up  8:19,  1 user,  load average: 0.06, 0.10, 0.09
+
+--- 2026-10-05 03:53:13 ---
+### free -h ###
+               total        used        free      shared  buff/cache   available
+Mem:           956Mi       151Mi       135Mi       3.6Mi       695Mi       804Mi
+Swap:             0B          0B          0B
+### df -h ###
+Filesystem      Size  Used Avail Use% Mounted on
+tmpfs           192M  616K  191M   1% /run
+/dev/vda2       4.9G  3.2G  1.5G  68% /
+tmpfs           479M     0  479M   0% /dev/shm
+tmpfs           479M     0  479M   0% /tmp
+none            1.0M     0  1.0M   0% /run/credentials/systemd-journald.service
+none            1.0M     0  1.0M   0% /run/credentials/getty@tty1.service
+tmpfs            96M  8.0K   96M   1% /run/user/0
+### uptime ###
+ 03:53:13 up  8:20,  1 user,  load average: 0.23, 0.14, 0.10
+
+--- 2026-10-05 03:54:13 ---
+### free -h ###
+               total        used        free      shared  buff/cache   available
+Mem:           956Mi       151Mi       135Mi       3.6Mi       695Mi       804Mi
+Swap:             0B          0B          0B
+### df -h ###
+Filesystem      Size  Used Avail Use% Mounted on
+tmpfs           192M  616K  191M   1% /run
+/dev/vda2       4.9G  3.2G  1.5G  68% /
+tmpfs           479M     0  479M   0% /dev/shm
+tmpfs           479M     0  479M   0% /tmp
+none            1.0M     0  1.0M   0% /run/credentials/systemd-journald.service
+none            1.0M     0  1.0M   0% /run/credentials/getty@tty1.service
+tmpfs            96M  8.0K   96M   1% /run/user/0
+### uptime ###
+ 03:54:13 up  8:21,  1 user,  load average: 0.08, 0.11, 0.09
+
+--- 2026-10-05 03:55:13 ---
+### free -h ###
+               total        used        free      shared  buff/cache   available
+Mem:           956Mi       152Mi       134Mi       3.6Mi       695Mi       804Mi
+Swap:             0B          0B          0B
+### df -h ###
+Filesystem      Size  Used Avail Use% Mounted on
+tmpfs           192M  616K  191M   1% /run
+/dev/vda2       4.9G  3.2G  1.5G  68% /
+tmpfs           479M     0  479M   0% /dev/shm
+tmpfs           479M     0  479M   0% /tmp
+none            1.0M     0  1.0M   0% /run/credentials/systemd-journald.service
+none            1.0M     0  1.0M   0% /run/credentials/getty@tty1.service
+tmpfs            96M  8.0K   96M   1% /run/user/0
+### uptime ###
+ 03:55:14 up  8:22,  1 user,  load average: 0.12, 0.12, 0.09
+
+--- 2026-10-05 03:56:14 ---
+### free -h ###
+               total        used        free      shared  buff/cache   available
+Mem:           956Mi       151Mi       135Mi       3.6Mi       695Mi       804Mi
+Swap:             0B          0B          0B
+### df -h ###
+Filesystem      Size  Used Avail Use% Mounted on
+tmpfs           192M  616K  191M   1% /run
+/dev/vda2       4.9G  3.2G  1.5G  68% /
+tmpfs           479M     0  479M   0% /dev/shm
+tmpfs           479M     0  479M   0% /tmp
+none            1.0M     0  1.0M   0% /run/credentials/systemd-journald.service
+none            1.0M     0  1.0M   0% /run/credentials/getty@tty1.service
+tmpfs            96M  8.0K   96M   1% /run/user/0
+### uptime ###
+ 03:56:14 up  8:23,  1 user,  load average: 0.04, 0.09, 0.09
