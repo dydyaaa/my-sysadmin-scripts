@@ -1,0 +1,283 @@
+> whoami && id
+
+root
+uid=0(root) gid=0(root) groups=0(root)
+
+Имя текущего пользователя,  его UID, GID и группы
+
+==============================================
+
+uname -a
+
+Linux 176046.ip-ptr.tech 7.0.0-22-generic #22-Ubuntu SMP PREEMPT_DYNAMIC Mon May 25 15:54:34 UTC 2026 x86_64 GNU/Linux
+
+Общая информация о системе. Версия ядра, дата сборки, архитектура
+
+==============================================
+
+> cat /etc/os-release
+
+PRETTY_NAME="Ubuntu 26.04 LTS"
+NAME="Ubuntu"
+VERSION_ID="26.04"
+VERSION="26.04 LTS (Resolute Raccoon)"
+VERSION_CODENAME=resolute
+ID=ubuntu
+ID_LIKE=debian
+HOME_URL="https://www.ubuntu.com/"
+SUPPORT_URL="https://help.ubuntu.com/"
+BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
+PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
+UBUNTU_CODENAME=resolute
+LOGO=ubuntu-logo
+
+Информация о дистрибутиве Linux. Название, версия, кодовое имя
+
+==============================================
+
+> uptime
+
+03:34:09 up  8:01,  1 user,  load average: 0.14, 0.13, 0.10
+
+Время работы системы, средняя нагрузка, количество пользователей.
+
+==============================================
+
+> free -h
+               total        used        free      shared  buff/cache   available
+Mem:           956Mi       150Mi       151Mi       3.6Mi       679Mi       805Mi
+Swap:             0B          0B          0B
+
+Потребление оперативной памяти
+
+==============================================
+
+> df -h 
+
+Filesystem      Size  Used Avail Use% Mounted on
+tmpfs           192M  616K  191M   1% /run
+/dev/vda2       4.9G  3.2G  1.5G  68% /
+tmpfs           479M     0  479M   0% /dev/shm
+tmpfs           479M     0  479M   0% /tmp
+none            1.0M     0  1.0M   0% /run/credentials/systemd-journald.service
+none            1.0M     0  1.0M   0% /run/credentials/getty@tty1.service
+tmpfs            96M  8.0K   96M   1% /run/user/0
+
+Занятость дисковых разделов
+
+==============================================
+
+> lsblk
+
+NAME   MAJ:MIN RM SIZE RO TYPE MOUNTPOINTS
+sr0     11:0    1   2K  0 rom  
+vda    253:0    0   5G  0 disk 
+├─vda1 253:1    0   1M  0 part 
+└─vda2 253:2    0   5G  0 part /
+
+Физические диски и их разделы
+
+==============================================
+
+> nproc
+
+1
+
+Количество процессоры ядер
+
+==============================================
+
+ps aux | head -20
+
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root           1  0.0  1.5  24288 15644 ?        Ss   Oct04   0:04 /usr/lib/systemd/systemd --switched-root --system --deserialize=52
+root           2  0.0  0.0      0     0 ?        S    Oct04   0:00 [kthreadd]
+root           3  0.0  0.0      0     0 ?        S    Oct04   0:00 [pool_workqueue_release]
+root           4  0.0  0.0      0     0 ?        I<   Oct04   0:00 [kworker/R-rcu_gp]
+root           5  0.0  0.0      0     0 ?        I<   Oct04   0:00 [kworker/R-sync_wq]
+root           6  0.0  0.0      0     0 ?        I<   Oct04   0:00 [kworker/R-kvfree_rcu_reclaim]
+root           7  0.0  0.0      0     0 ?        I<   Oct04   0:00 [kworker/R-slub_flushwq]
+root           8  0.0  0.0      0     0 ?        I<   Oct04   0:00 [kworker/R-netns]
+root          10  0.0  0.0      0     0 ?        I<   Oct04   0:00 [kworker/0:0H-kblockd]
+root          13  0.0  0.0      0     0 ?        I<   Oct04   0:00 [kworker/R-mm_percpu_wq]
+root          14  0.0  0.0      0     0 ?        S    Oct04   0:01 [ksoftirqd/0]
+root          15  0.1  0.0      0     0 ?        I    Oct04   0:53 [rcu_preempt]
+root          16  0.0  0.0      0     0 ?        S    Oct04   0:00 [rcu_exp_par_gp_kthread_worker/0]
+root          17  0.0  0.0      0     0 ?        S    Oct04   0:00 [rcu_exp_gp_kthread_worker]
+root          18  0.0  0.0      0     0 ?        S    Oct04   0:00 [migration/0]
+root          19  0.0  0.0      0     0 ?        S    Oct04   0:00 [kprobe-optimizer]
+root          20  0.0  0.0      0     0 ?        S    Oct04   0:00 [idle_inject/0]
+root          21  0.0  0.0      0     0 ?        S    Oct04   0:00 [cpuhp/0]
+root          22  0.0  0.0      0     0 ?        S    Oct04   0:00 [kdevtmpfs]
+
+Список запущенных процессов и их использование ресурсов
+
+==============================================
+
+> top -bn1 | head -20
+
+top - 03:41:44 up  8:08,  1 user,  load average: 0.16, 0.12, 0.09
+Tasks: 127 total,   1 running, 126 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  8.3 us,  8.3 sy,  0.0 ni, 75.0 id,  8.3 wa,  0.0 hi,  0.0 si,  0.0 st 
+MiB Mem :    956.4 total,    148.2 free,    153.8 used,    680.2 buff/cache     
+MiB Swap:      0.0 total,      0.0 free,      0.0 used.    802.6 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+   4923 root      20   0   18496   7636   5444 S   9.1   0.8   0:00.80 sshd-se+
+      1 root      20   0   24288  15644  11800 S   0.0   1.6   0:04.90 systemd
+      2 root      20   0       0      0      0 S   0.0   0.0   0:00.02 kthreadd
+      3 root      20   0       0      0      0 S   0.0   0.0   0:00.00 pool_wo+
+      4 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+      5 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+      6 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+      7 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+      8 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+     10 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+     13 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+     14 root      20   0       0      0      0 S   0.0   0.0   0:01.29 ksoftir+
+     15 root      20   0       0      0      0 I   0.0   0.0   0:53.56 rcu_pre+
+
+Снимок нагрузки: сводка по процессору, памяти список процессов
+
+==============================================
+
+> cat /proc/meminfo | head -10
+
+MemTotal:         979324 kB
+MemFree:          152880 kB
+MemAvailable:     822968 kB
+Buffers:           19848 kB
+Cached:           645668 kB
+SwapCached:            0 kB
+Active:           137732 kB
+Inactive:         575204 kB
+Active(anon):      49808 kB
+Inactive(anon):     8772 kB
+
+Детальная статистика памяти
+
+==============================================
+
+> ls -l /etc/ | head -15
+
+total 720
+drwxr-xr-x 2 root root    4096 May 18 12:35 PackageKit
+drwxr-xr-x 3 root root    4096 Apr 21 01:07 UPower
+drwxr-xr-x 4 root root    4096 Apr 21 01:06 X11
+-rw-r--r-- 1 root root    4027 Nov  4  2025 adduser.conf
+drwxr-xr-x 2 root root    4096 May 18 12:38 alternatives
+drwxr-xr-x 2 root root    4096 Apr 21 01:07 apparmor
+drwxr-xr-x 8 root root    4096 Jun 22 15:45 apparmor.d
+drwxr-xr-x 3 root root    4096 Apr 21 01:07 apport
+drwxr-xr-x 8 root root    4096 May 18 12:29 apt
+-rw-r--r-- 1 root root    2553 Feb 13  2026 bash.bashrc
+-rw-r--r-- 1 root root      45 Sep 29  2025 bash_completion
+drwxr-xr-x 2 root root    4096 Apr 21 01:07 bash_completion.d
+-rw-r--r-- 1 root root     367 Mar 10  2026 bindresvport.blacklist
+drwxr-xr-x 2 root root    4096 Apr 16 01:32 binfmt.d
+
+Подробная информация о содержимом каталога /etc. Права, владелец, размер, дата создания, название файла
+
+==============================================
+
+> cat /proc/cpuinfo | grep "model name" | uniq
+
+model name : Intel Core Processor (Broadwell, IBRS)
+
+Модель процессора
+
+==============================================
+
+> pstree -p | head -30 || ps -ef --forest | head -30
+
+systemd(1)-+-agetty(1175)
+           |-chronyd-starter(878)---chronyd(926)---chronyd(931)
+           |-dbus-daemon(879)
+           |-multipathd(630)-+-{multipathd}(632)
+           |                 |-{multipathd}(633)
+           |                 |-{multipathd}(634)
+           |                 |-{multipathd}(635)
+           |                 |-{multipathd}(636)
+           |                 |-{multipathd}(637)
+           |                 `-{multipathd}(638)
+           |-networkd-dispat(885)
+           |-qemu-ga(1019)---{qemu-ga}(1020)
+           |-sshd(1228)---sshd-session(4879)---sshd-session(4923)---bash(4924)-+-head(5398)
+           |                                                                   `-pstree(5397)
+           |-systemd(4885)---(sd-pam)(4887)
+	   |-systemd-journal(601)
+           |-systemd-logind(888)
+           |-systemd-udevd(659)
+           `-unattended-upgr(1163)---{unattended-upgr}(1198)
+
+Древо процессов. ps -ef --forest используется как fallback 
+
+==============================================
+
+> cat /proc/1/status
+
+Name: systemd
+Umask: 0000
+State: S (sleeping)
+Tgid: 1
+Ngid: 0
+Pid: 1
+PPid: 0
+TracerPid: 0
+Uid: 0 0 0 0
+Gid: 0 0 0 0
+FDSize: 256
+Groups:  
+NStgid: 1
+NSpid: 1
+NSpgid: 1
+NSsid: 1
+Kthread: 0
+VmPeak:    24324 kB
+VmSize:    24288 kB
+VmLck:        0 kB
+VmPin:        0 kB
+VmHWM:    15644 kB
+VmRSS:    15644 kB
+RssAnon:     3844 kB
+RssFile:    11800 kB
+RssShmem:        0 kB
+VmData:     3264 kB
+VmStk:      132 kB
+VmExe:       64 kB
+VmLib:    12656 kB
+VmPTE:       88 kB
+VmSwap:        0 kB
+HugetlbPages:        0 kB
+CoreDumping: 0
+THP_enabled: 1
+untag_mask: 0xffffffffffffffff
+Threads: 1
+SigQ: 1/1963
+SigPnd: 0000000000000000
+ShdPnd: 0000000000000000
+SigBlk: 7fefc1fe28014a03
+SigIgn: 0000000000001000
+SigCgt: 00000000000004ec
+CapInh: 0000000000000000
+CapPrm: 000001ffffffffff
+CapEff: 000001ffffffffff
+CapBnd: 000001ffffffffff
+CapAmb: 0000000000000000
+NoNewPrivs: 0
+Seccomp: 0
+Seccomp_filters: 0
+Speculation_Store_Bypass: thread vulnerable
+SpeculationIndirectBranch: conditional enabled
+Cpus_allowed: 1
+Cpus_allowed_list: 0
+Mems_allowed: 00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000001
+Mems_allowed_list: 0
+voluntary_ctxt_switches: 10113
+nonvoluntary_ctxt_switches: 3651
+x86_Thread_features: 
+x86_Thread_features_locked:
+
+Статус процесса PID=1. Это самый первый процесс, который запускает ядро Linux
+
+==============================================
