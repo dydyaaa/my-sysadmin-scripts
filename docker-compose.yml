@@ -1,0 +1,8 @@
+services:
+  monitor:
+    build: .
+    image: my-script
+    container_name: my-monitor-compose
+    restart: unless-stopped
+    volumes:
+      - ./monitor.log:/monitor.log
