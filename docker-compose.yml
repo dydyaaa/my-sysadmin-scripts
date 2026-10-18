@@ -4,5 +4,7 @@ services:
     image: my-script
     container_name: my-monitor-compose
     restart: unless-stopped
+    ports:
+      - "127.0.0.1:8080:8080"
     volumes:
-      - ./monitor.log:/monitor.log
+      - ./monitor.log:/var/www/monitor.log
